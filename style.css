@@ -1,0 +1,269 @@
+body{
+    width: 100%;
+    height: 1rem;
+    font-family:  'Raleway', sans-serif;
+    margin: 0px;
+    background-color: grey;
+
+   
+}
+header{
+    width:100%; /* bug no layout use apenas 100% */
+    height:0;
+}
+/* Cabeçalho inicial */
+ 
+    
+    
+
+#frase {
+    font-family:'Cookie', cursive ;
+    position: absolute;
+    background-color: #BF571B99;
+    color: white;
+    font-size: 55px;
+    top: 8em;
+    padding-left: 1em;
+    
+}
+
+.botoes {
+    position: absolute;
+    background-color: #591902;
+    color: white;
+    font-size: 1.4em;
+    width:100%;
+    height: 50px;
+
+    top: 25em;
+    display: inline-flex;
+    text-align: center;
+    
+}
+#empresa,
+#produtos,
+#localizacao,
+#contato {
+    width: 100%;
+    padding-top: 8px;
+    padding-right: 15px;
+    border-right: 0.5px solid #F29D35;
+    border-collapse: collapse;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+
+
+
+
+/* Gerando efeitos nos botões */
+.click: link {
+    
+    color: #F29D35;
+}
+
+.click:visited {
+  
+    color: white ;
+  }
+
+.click:hover {
+    
+    color: #db501d;
+  }
+
+  /* Configurando o main  */
+  
+main {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 68rem;
+    top: 38em;
+    
+}
+
+
+#topico1 {
+
+    margin-top: 1em;
+    margin-bottom: 0em;
+    font-size: 2em;  
+    margin-left: 1.5em;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+p{
+    margin: 1em 3em;
+    font-size: 1em;
+    font-family:  'Raleway', sans-serif;
+       
+}
+
+.divmaior {
+    overflow: auto;
+    justify-content: center;
+    justify-items: center;
+    
+    
+}
+article {
+    width: 25%;
+    height: 20em;
+    background-color: #591902;
+    float: left;
+    margin: 1%;
+    border-radius: 10%;
+    background-image: url("./Imagens/expresso.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+   
+}
+
+/* Imagens dos cafés */
+
+#expresso,
+#mocha,
+#capuccino {        
+    position: relative;
+    color: white;
+    top: 12em;
+    left: 1em;
+    font-size: 1.5;
+   
+}
+#hr-1 {
+    color:black;
+    border: 0.5px solid;
+      
+    margin-top: 0.5em;
+    margin-left: 3em;
+    margin-right:40em ;
+}
+
+hr {
+    color:#F29D35;
+    border: 1px solid;
+    margin-top: 12em;
+    margin-left: 1em;
+    margin-right:1em ;
+}
+
+/* Texto dos cafés */
+
+.texto-caixa {
+    color: white;
+    font-size: 0.8em;
+    font-weight: 100;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto 1em;
+   
+}
+
+#topico2 {
+    margin-top: 10em;
+    margin-bottom: 0em;
+    font-size: 2em;  
+    margin-left: 1.5em;
+    font-family:  'Raleway', sans-serif;
+}
+#hr-2 {
+    color:black;
+    border: 1px solid;
+    margin-top: 0em;
+    margin-left: 3em;
+    margin-right:40em ;
+}
+
+/* Tabela */
+
+table, th , td {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: bold;
+    border: 1px solid black;
+    margin: 2em 3em;
+    border-collapse: collapse;
+    padding: 10px;
+    
+}
+tr:nth-child(1) {
+    background-color:#591902;
+    color:white;
+}
+
+td:nth-child(1) {
+    background-color:#591902 ;
+    color:white;
+}
+
+
+td:nth-child(2) {
+    background-color:#F29D35;
+    color:black;
+}
+
+/* Rodapé */
+footer{
+    width: 100%;
+    height: 2em;
+    background-color:#591902;
+    color: white;
+    top: 105em;
+    padding: 5em 2em;
+    font-family:  'Raleway', sans-serif;
+    position:absolute;
+       
+}
+
+/* Media-querys são os pontos de quebra como o layout vai se comportar em tal largura */
+/* Desktop */
+
+
+
+
+
+
+/* Phone (retrato) */
+@media only screen and (min-width:321px) and (max-width:860px){
+body{
+    background-size: 250%;
+    
+}
+
+#frase{
+    font-size: 45px;
+    top: 10em;
+
+}
+
+.caixas{
+    display:flex;
+    width: 100%;
+    height:auto;
+   
+}
+.cabecalho, {
+    
+    
+}
+
+.table {
+    display: block;
+    width: 100%;
+    
+}
+}
+
+@media screen only screen and (min-width:516px) and (max-width:954px){
+    
+    #frase{
+        font-size: 26px;
+        top: 17em;
+    
+    }
+}

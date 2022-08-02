@@ -11,33 +11,30 @@ body{
    
 }
 header{
-    width: 100% !important;
-   
-    min-width: 860px;
- 
+    width: 100% !important;     
+    position:relative 
+}
+header > .carousel {
+    max-height: 25em;
 }
 main {
-     height: 100vh;
-    width: 100vw;
-    position: absolute;
-    background-color: white;
-    top: 38em;
-    
+    width: 100%;
+    position: relative;
+    background-color: white;       
 }
  
-    
-    
+   
 
 #frase {
     font-family:'Cookie', cursive ;
     position: absolute;
     background-color: #BF571B99;
     color: white;
-    font-size: 55px;
-    top: 6em;
-    padding-left: 1em;
-    width: 8em;
-    display: inline;
+    bottom: 2.5em;
+    padding-left: 0.2em;
+    width: 9em;
+    font-size: 3em;
+    /* display: inline; */
     
 }
 
@@ -49,7 +46,7 @@ main {
     color: white;
     font-size: 1.4em;
     height: 50px;
-    top: 25em;
+    bottom: 0;
     display: inline-flex;
     text-align: center;
     
@@ -70,7 +67,7 @@ main {
 }
 
 /* Gerando efeitos nos botões */
-.click: link {
+.click:link {
     
     color: #F29D35;
 }
@@ -88,16 +85,15 @@ main {
   /* Configurando o main  */
   
 
-.container {
-    
+.container {    
     width: 100%;
-    background-color: pink;
+    background-color: white;
+    padding-bottom: 1em;
 }
 
 #topico1 {
-    height: 100vh;
-    width: 100vw;
-    margin-top: 1em;
+    padding-top: 1em;
+    margin-left: 0px;
     margin-bottom: 0em;
     font-size: 2em;  
     margin-left: 1.5em;
@@ -105,18 +101,18 @@ main {
     
 }
 
-p{
-    
-    width: 100vw;
+p{    
     margin: 1em 3em;
     font-size: 1em;
     font-family:  'Raleway', sans-serif;
+    text-align: justify;
        
 }
 
  .divmaior{
         width: 100% !important;
-        margin-left: 20%;
+        display: flex;
+        justify-content: center;
     }  
 
 article {
@@ -142,7 +138,7 @@ article {
 #capuccino {        
     position: relative;
     color: white;
-    top: 8em;
+    top: 9em;
     left: 1em;
     font-size: 1.5;
    
@@ -150,7 +146,6 @@ article {
 #hr-1 {
     color:black;
     border: 0.5px solid;
-      
     margin-top: 0.5em;
     margin-left: 3em;
     margin-right:40em ;
@@ -159,7 +154,7 @@ article {
 hr {
     color:#F29D35;
     border: 1px solid;
-    margin-top: 8em;
+    margin-top: 9em;
     margin-left: 1em;
     margin-right:1em ;
 }
@@ -177,8 +172,7 @@ hr {
 }
 
 #topico2 {
-    margin-top: 10em;
-    margin-bottom: 0em;
+     margin-bottom: 0em;
     font-size: 2em;  
     margin-left: 1.5em;
     font-family:  'Raleway', sans-serif;
@@ -203,8 +197,10 @@ table, th , td {
     font-style: bold;
     border: 1px solid black;
     margin-top: 2em;
-    margin-left: 3em;
+    margin-left: 6em;
+    margin-bottom: 2em;
     border-collapse: collapse;
+    padding-left: 0.5em;
     
     
 }
@@ -239,61 +235,112 @@ footer{
 
 /* Media-querys são os pontos de quebra como o layout vai se comportar em tal largura */
 
-
 /* Tamanho de disposítivos móveis P,M e G */
-@media only screen and (min-width:320px) and (max-width:425px){
+@media only screen and (max-width:425px){
     .container {
         width: 100% !important;
         
     }
     .botoes{
-        position: inherit;
+        position: inherit; 
+        height: 40px;
+    }
+    #empresa, #produtos, #localizacao, #contato {
+        font-size: 16px;
     }
  
     #topico1{
-        font-size: 3rem;
-        margin-left: 1.9em;
+        font-size: 1.5rem;
+        /* margin-left: 1.9em;        */
     }
     #hr-1 {
         margin-left: 6em;
     }
     p{
-        font-size: 2em;
-        width: 100%;
-       
+        font-size: 1rem;  
+        margin: 0            
     }
+    #frase {
+        font-size: 2rem;
+                padding-left: 0.2em;
+        width: 9em;
+        }
+    
     .divmaior {
         display:flex;
         flex-direction: column;
+        align-items: center;   
         
-        } 
+    } 
+
+    
+    .divmaior > .caixas {
+        width: 100%;
+    }
+    #expresso, #mocha, #capuccino {
+        top: 13em;
+    }
+    hr{
+        margin-top: 13em;
+       margin-bottom: 0.5em ;
+    }
+    .texto-caixa {
+        margin-top: 0em;
+    }
+
+    .tabela{
+        margin-left: 2em;
+        
+    }
+
 }
 
-
 /* Tablet */
-@media only screen and (min-width:425px) and (max-width:768px){
+@media only screen and (min-width:426px) and (max-width:768px){
     .container{
         width: 100% !important;
     }
     .botoes{
         position: inherit;
+        height: 40px;
+    }
+
+    #empresa, #produtos, #localizacao, #contato {
+        font-size: 16px;
+    }
+    #frase {
+        font-size: 2rem;
+        padding-left: 0.2em;
+        width: 9em;
     }
     #topico1{
-        font-size: 3rem;
-        margin-left: 1.9em;
-        width: 100%;
+        font-size: 2rem;
+        /* margin-left: 1.9em;        */
     }
     #hr-1 {
         margin-left: 6em;
     }
     p{
-        font-size: 2em;
-        width: 100%;
+        font-size: 1rem;              
     }
     .divmaior {
         display:flex;
         flex-direction: column;
+        align-items: center;   
         
-        } 
+    } 
+    .divmaior > .caixas {
+        width: 50%;
+    }
+    #expresso, #mocha, #capuccino {
+        top: 13em;
+    }
+    hr{
+        margin-top: 13em;
+       margin-bottom: 0.5em ;
+    }
+    .texto-caixa {
+        margin-top: 0em;
+    }
 }
 
